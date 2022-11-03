@@ -68,8 +68,6 @@ def batch_iter(y, tx, batch_size, num_batches=None, shuffle=True):
         shuffled_y = y
         shuffled_tx = tx
 
-
-    
     # DM: Create inf. iterator if num_batches=None
     # Also, support num_batches > dataset size
     c = 0
@@ -80,3 +78,4 @@ def batch_iter(y, tx, batch_size, num_batches=None, shuffle=True):
         end = start + batch_size # overshoot is not a problem
         yield shuffled_y[start:end], shuffled_tx[start:end]
         c += 1
+
